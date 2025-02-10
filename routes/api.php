@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProductosController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/neumaticos', [ProductosController::class, 'index']);
+
+
+Route::post('/chat', [ChatController::class, 'chat']);
